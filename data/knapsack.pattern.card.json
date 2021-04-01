@@ -1,0 +1,54 @@
+{
+  "id": "card",
+  "title": "Card",
+  "description": "",
+  "statuses": {},
+  "templates": [
+    {
+      "id": "angular",
+      "title": "angular",
+      "path": "../packages/ap-angular/src/lib/card/card.component.ts",
+      "alias": "CardComponent",
+      "templateLanguageId": "angular",
+      "spec": {
+        "slots": {},
+        "props": {
+          "$schema": "http://json-schema.org/draft-07/schema",
+          "description": "",
+          "type": "object",
+          "required": [],
+          "properties": {
+            "img": { "type": "string", "title": "Image Src" },
+            "title": { "type": "string", "title": "Title" },
+            "subtitle": { "type": "string", "title": "Subtitle" },
+            "cardBody": { "type": "string", "title": "Card Body" }
+          }
+        }
+      },
+      "demosById": {
+        "main": {
+          "id": "main",
+          "title": "Main",
+          "type": "data",
+          "data": {
+            "props": {
+              "title": "Eleifend donec dolor",
+              "subtitle": "Ac eget diam curabitur litora",
+              "cardBody": "<p>Donec eu pulvinar lorem nec phasellus bibendum dignissim pellentesque, venenatis netus natoque mauris conubia risus dis cras, tristique cubilia commodo sociosqu per augue placerat.</p>",
+              "img": "https://placeimg.com/640/240/any"
+            },
+            "slots": {}
+          },
+          "description": ""
+        }
+      },
+      "demos": ["main"],
+      "slices": []
+    }
+  ],
+  "tabs": [
+    { "type": "subPage", "id": "overview" },
+    { "type": "template", "id": "angular" }
+  ],
+  "subPages": [{ "id": "overview", "title": "Overview", "slices": [] }]
+}

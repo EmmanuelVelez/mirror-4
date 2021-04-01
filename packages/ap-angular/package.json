@@ -1,0 +1,38 @@
+{
+  "name": "@knapsack-cloud/ap-sandbox-angular",
+  "description": "Associated Press Design System in Angular",
+  "version": "2.9.0",
+  "scripts": {
+    "build": "ng build",
+    "new": "ng generate component --export",
+    "start": "ng build --watch",
+    "prepublishOnly": "yarn build",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-ng-packagr": "^0.901.11",
+    "@angular/core": "~9.1.12",
+    "@angular/platform-browser": "~9.1.12",
+    "@angular/platform-browser-dynamic": "~9.1.12",
+    "ng-packagr": "^9.0.0",
+    "zone.js": "^0.11.1"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.1.12",
+    "@angular/core": "^9.1.12"
+  },
+  "dependencies": {
+    "@knapsack-cloud/ap-sandbox-design-tokens": "^2.9.0",
+    "tslib": "^1.10.0"
+  },
+  "repository": {
+    "url": "https://github.com/knapsack-cloud/ap-sandbox",
+    "directory": "packages/ap-angular"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com",
+    "directory": "dist"
+  }
+}

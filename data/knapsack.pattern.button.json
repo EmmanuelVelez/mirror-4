@@ -1,0 +1,138 @@
+{
+  "id": "button",
+  "title": "Button",
+  "description": "An interactive element that transforms some property on a page, or otherwise submits a form.",
+  "statuses": { "design": "ready", "angular": "ready" },
+  "demoSize": "s",
+  "demoWidths": [{ "width": 180 }],
+  "templates": [
+    {
+      "id": "angular",
+      "title": "angular",
+      "path": "../packages/ap-angular/src/lib/button/button.component.ts",
+      "alias": "ButtonComponent",
+      "templateLanguageId": "angular",
+      "spec": {
+        "slots": {},
+        "props": {
+          "$schema": "http://json-schema.org/draft-07/schema",
+          "description": "An interactive element that transforms some property on a page, or otherwise submits a form.",
+          "type": "object",
+          "required": ["text"],
+          "properties": {
+            "text": { "type": "string" },
+            "style": {
+              "type": "string",
+              "enum": ["primary", "secondary"],
+              "enumNames": ["Primary", "Secondary"],
+              "default": "Primary",
+              "title": "Style"
+            },
+            "size": {
+              "type": "string",
+              "enum": ["s", "m", "l"],
+              "enumNames": ["Small", "Default", "Large"],
+              "default": "m"
+            },
+            "disabled": { "type": "boolean", "default": false }
+          }
+        }
+      },
+      "assetSetIds": ["default"],
+      "demosById": {
+        "main": {
+          "id": "main",
+          "title": "Primary",
+          "type": "data",
+          "data": {
+            "props": {
+              "style": "primary",
+              "size": "m",
+              "disabled": false,
+              "text": "Primary Angular"
+            },
+            "slots": {}
+          },
+          "description": "The primary action on the page. Advances the user to the next logical step. One per page max."
+        },
+        "Ftu0Efvn34": {
+          "id": "Ftu0Efvn34",
+          "title": "Secondary",
+          "description": "Standard button for general interactivity.",
+          "type": "data",
+          "data": {
+            "props": {
+              "style": "secondary",
+              "size": "m",
+              "disabled": false,
+              "text": "Secondary"
+            },
+            "slots": {}
+          }
+        }
+      },
+      "demos": ["main", "Ftu0Efvn34"],
+      "slices": []
+    }
+  ],
+  "subPages": [
+    {
+      "title": "Overview",
+      "id": "Overview",
+      "slices": [
+        {
+          "id": "kJJeYn-tk",
+          "blockId": "markdown-slice",
+          "data": {
+            "md": "Simple button pattern with a few options. Try manipulating the `HandleClick` property on one of the pattern template tabs (React, Web Comopnent, or Twig), where you can actually pass in a function from the schema form."
+          }
+        },
+        {
+          "id": "GQPv3h1U2",
+          "blockId": "pattern-variations",
+          "data": {
+            "templateId": "angular",
+            "patternId": "button",
+            "demoId": "main",
+            "variationId": "type"
+          }
+        },
+        {
+          "id": "m_g-24BmU",
+          "blockId": "pattern-variations",
+          "data": {
+            "templateId": "angular",
+            "patternId": "button",
+            "demoId": "main",
+            "variationId": "size"
+          }
+        },
+        {
+          "id": "MLvXI6mJ3",
+          "blockId": "markdown-slice",
+          "data": { "md": "## Color Tokens Used" }
+        },
+        {
+          "id": "bPTRM9ENe",
+          "blockId": "design-token-slice",
+          "data": {
+            "tokens": { "tags": [], "category": "color", "name": "p" },
+            "demo": { "id": "color-swatch" }
+          }
+        },
+        {
+          "id": "PrAYgtwC8",
+          "blockId": "design-token-slice",
+          "data": {
+            "tokens": { "tags": [], "category": "color", "name": "sec" },
+            "demo": { "id": "color-swatch" }
+          }
+        }
+      ]
+    }
+  ],
+  "tabs": [
+    { "type": "subPage", "id": "Overview" },
+    { "type": "template", "id": "angular" }
+  ]
+}

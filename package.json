@@ -1,0 +1,61 @@
+{
+  "name": "@knapsack-cloud/ap-sandbox",
+  "private": true,
+  "description": "Knapsack sandbox workspace for the Associated Press (AP).",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "lerna run clean && rm -rf ./ks-public/dist ./dist",
+    "build": "run-s -l pkgs:build ks:build ng-app:build",
+    "pkgs:build": "lerna run build",
+    "pkgs:start": "lerna run start",
+    "ks:build": "NODE_ENV=production knapsack build",
+    "ks:serve": "NODE_ENV=production KNAPSACK_PORT=${PORT} knapsack serve",
+    "ks:test": "knapsack test",
+    "ks:start": "knapsack start",
+    "ng-app:start": "ng build knapsack-renderer-angular-app --watch",
+    "ng-app:build": "ng build knapsack-renderer-angular-app",
+    "start": "yarn build && run-p -l *:start",
+    "test": "run-s --print-name *:test"
+  },
+  "devDependencies": {
+    "@angular/animations": "~9.1.12",
+    "@angular/common": "~9.1.12",
+    "@angular/compiler": "~9.1.12",
+    "@angular-devkit/build-angular": "~0.901.11",
+    "@angular/cli": "~9.1.11",
+    "@angular/compiler-cli": "~9.1.12",
+    "@angular/elements": "^9",
+    "@auto-it/released": "^10.20.4",
+    "@knapsack/app": "^3.13.12",
+    "@knapsack/babel-config": "^3.13.12",
+    "@knapsack/build-tools": "^3.13.12",
+    "@knapsack/core": "^3.13.12",
+    "@knapsack/plugin-changelog-md": "^3.13.12",
+    "@knapsack/renderer-angular": "^3.13.12",
+    "@knapsack/renderer-html": "^3.13.12",
+    "@knapsack/renderer-react": "^3.13.12",
+    "@knapsack/renderer-twig": "^3.13.12",
+    "@knapsack/renderer-vue": "^3.13.12",
+    "@knapsack/renderer-web-components": "^3.13.12",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "typescript": "~3.8.0",
+    "auto": "^10.20.4",
+    "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=12.0.0 || >=14.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": {
+    "name": "KnapsackBot",
+    "email": "53622700+KnapsackBot@users.noreply.github.com"
+  },
+  "repository": "https://github.com/knapsack-cloud/ap-sandbox"
+}
