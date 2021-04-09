@@ -50,6 +50,6 @@ jobs:
       - name: Release
         run: yarn auto shipit
         env:
-          GITHUB_TOKEN: ${{ secrets.EVAN_TOKEN_FOR_GITHUB_PKG }}
-          NPM_TOKEN: ${{ secrets.EVAN_TOKEN_FOR_GITHUB_PKG }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   # END: `build` --------
