@@ -21,8 +21,8 @@ module.exports = configureKnapsack({
     }),
   ],
   cloud: {
-    siteId: 'ap-sandbox',
-    repoName: 'ap-sandbox',
+    siteId: 'ap-design-components',
+    repoName: 'mirorring-test',
     repoOwner: 'knapsack-cloud',
     baseBranch: 'main',
   },
